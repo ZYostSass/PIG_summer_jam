@@ -7,11 +7,12 @@ public class Player : MonoBehaviour
     Rigidbody rb;
 
     [Header("Movement")]
-    public float speed = 10f;
+    public float speed = 5f;
     public bool isRunning;
-    
     public Transform orientation;
     Vector3 moveDir;
+    Vector3 moveAmount;
+    Vector3 smoothMoveVel;
 
     [Header("Jumping")]
     public float jumpForce = 10f;
@@ -45,6 +46,7 @@ public class Player : MonoBehaviour
     {
         //rb.velocity = new Vector3(xSpeed * speed, rb.velocity.y, zSpeed * speed);
 
+        // This is for if we want to implement jumping.
         RaycastHit hit;
         if (Physics.Raycast(transform.position, Vector3.down, out hit, raycastDistanceJump, ground)) 
         {
@@ -78,11 +80,13 @@ public class Player : MonoBehaviour
             }
         }
 
+        // This is for a parrying weapon mechanic.
         if (Input.GetMouseButtonDown(0)) 
         {
             ParryAttack();
         }
 
+        // For sprinting.
         if (Input.GetKey(KeyCode.LeftShift)) 
         {
             isRunning = true;
@@ -94,6 +98,7 @@ public class Player : MonoBehaviour
 
         ShiftToRun();
 
+        // This is for an item pickup mechanic.
         if (Input.GetMouseButton(1)) 
         {
             if (currentObject)
@@ -119,9 +124,13 @@ public class Player : MonoBehaviour
         float zSpeed = Input.GetAxis("Vertical");
         
         moveDir = orientation.forward * zSpeed + orientation.right * xSpeed;
-        
-        rb.AddForce(moveDir.normalized * speed, ForceMode.Force);
+        Vector3 targetMove = moveDir * speed;
+        moveAmount = Vector3.SmoothDamp(moveAmount, targetMove, ref smoothMoveVel, .15f);
 
+        //rb.AddForce(moveDir.normalized * speed, ForceMode.Force);
+        rb.MovePosition (rb.position + transform.TransformDirection (moveAmount) * Time.fixedDeltaTime);
+
+        // This is for an item pickup mechanic.
         if (currentObject)
         {
             Vector3 directionToPoint = pickupTarget.position - currentObject.position;
@@ -131,6 +140,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    // This is for a parrying weapon mechanic.
     void ParryAttack() 
     {
         RaycastHit hit;
@@ -142,6 +152,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    // For sprinting.
     void ShiftToRun()
     {
         if (isRunning)
@@ -154,6 +165,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    // For debugging purposes.
     private void OnDrawGizmos() {
         Gizmos.DrawRay(transform.position, Vector3.forward * raycastDistanceParry);
     }
