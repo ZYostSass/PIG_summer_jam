@@ -35,6 +35,9 @@ public class Player : MonoBehaviour
     [SerializeField] private float pickupRange;
     private Rigidbody currentObject;
 
+    [Header("Dialogue")]
+    public bool inDialogue = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +48,15 @@ public class Player : MonoBehaviour
     void Update()
     {
         //rb.velocity = new Vector3(xSpeed * speed, rb.velocity.y, zSpeed * speed);
+        
+        // Stop movement if in dialogue
+        if (inDialogue) {
+            speed = 0;
+        }
+        else {
+            speed = 5f;
+        }
+        
 
         // This is for if we want to implement jumping.
         RaycastHit hit;
@@ -155,14 +167,27 @@ public class Player : MonoBehaviour
     // For sprinting.
     void ShiftToRun()
     {
-        if (isRunning)
+        if (!inDialogue) 
         {
-            speed = 15f;
+            if (isRunning)
+            {
+                speed = 15f;
+            }
+            else
+            {
+                speed = 10f;
+            }
         }
-        else
-        {
-            speed = 10f;
-        }
+    }
+
+    public void onDialogue() 
+    {
+        inDialogue = true;
+    }
+
+    public void exitDialogue()
+    {
+        inDialogue = false;
     }
 
     // For debugging purposes.
