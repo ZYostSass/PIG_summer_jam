@@ -140,7 +140,8 @@ public class Player : MonoBehaviour
         moveAmount = Vector3.SmoothDamp(moveAmount, targetMove, ref smoothMoveVel, .15f);
 
         //rb.AddForce(moveDir.normalized * speed, ForceMode.Force);
-        rb.MovePosition (rb.position + transform.TransformDirection (moveAmount) * Time.fixedDeltaTime);
+        //rb.MovePosition (rb.position + transform.TransformDirection (moveAmount) * Time.fixedDeltaTime);
+        transform.position += moveDir * (speed * Time.deltaTime); 
 
         // This is for an item pickup mechanic.
         if (currentObject)
@@ -175,7 +176,7 @@ public class Player : MonoBehaviour
             }
             else
             {
-                speed = 10f;
+                speed = 5f;
             }
         }
     }
