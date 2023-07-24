@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{68fedf8b-e9bb-4976-bee6-30da9f0227f3}">
+		<property name="assetPath">
+			<value>Alley_Residential_7.13.23.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>151.57895691609977</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ee351b39-22f9-4405-a339-ee23608ea0e9}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class Player : MonoBehaviour
 {
@@ -8,6 +9,10 @@ public class Player : MonoBehaviour
     public float moveSpeed;
 
     public float groundDrag;
+
+    public bool isMoving;
+    public float footstepTimer = 0.0f;
+    private float footstepSpeed = 0.75f;
 
     [HideInInspector] public float walkSpeed;
 
@@ -33,17 +38,25 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        
         // ground check
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround);
 
         MyInput();
         SpeedControl();
+        PlayFootsteps();
 
         // handle drag
         if (grounded)
             rb.drag = groundDrag;
         else
             rb.drag = 0;
+        
+        // z axis check, for updating music system accordingly
+        var areaParam = GetComponent<FMODUnity.StudioEventEmitter>();
+        areaParam.SetParameter("Area", transform.position.z + 250.0f);
+
+
     }
 
     private void FixedUpdate()
@@ -61,6 +74,10 @@ public class Player : MonoBehaviour
     {
         // calculate movement direction
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+        if (moveDirection.x != 0 || moveDirection.z != 0)
+            isMoving = true;
+        else
+            isMoving = false;
 
         // on ground
         if(grounded)
@@ -77,5 +94,23 @@ public class Player : MonoBehaviour
             Vector3 limitedVel = flatVel.normalized * moveSpeed;
             rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
         }
+    }
+
+    private void PlayFootsteps()
+    {
+        
+        if (isMoving)
+        {
+            // Debug.Log("Checking if able to play footstep. " + footstepTimer);
+            if (footstepTimer >= footstepSpeed)
+            {
+                Debug.Log("Playing footstep.");
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Footsteps");
+                footstepTimer = 0.0f;
+            }
+        }
+        // Debug.Log(Time.deltaTime);
+        footstepTimer = footstepTimer + Time.deltaTime;
+        // Debug.Log("footstepTimer : " + footstepTimer);
     }
 }

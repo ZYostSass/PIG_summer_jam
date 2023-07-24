@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{723bc885-74d9-430c-93df-ad277d73f747}">
+		<property name="assetPath">
+			<value>Alley_Ending Drone_7.19.23.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>41.052630385487525</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ee351b39-22f9-4405-a339-ee23608ea0e9}</destination>
+		</relationship>
+	</object>
+</objects>

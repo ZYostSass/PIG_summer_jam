@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{184d7e59-8523-4cb5-80d5-deec4d9eaf5e}">
+		<property name="name">
+			<value>MarketAm</value>
+		</property>
+		<relationship name="folder">
+			<destination>{55a99d2e-ec6c-4faa-856d-869ba2fb7d66}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{00b5c396-6705-43b2-95bf-683c8fddae2f}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{00b5c396-6705-43b2-95bf-683c8fddae2f}">
+		<property name="maximum">
+			<value>250</value>
+		</property>
+		<property name="initialValue">
+			<value>250</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

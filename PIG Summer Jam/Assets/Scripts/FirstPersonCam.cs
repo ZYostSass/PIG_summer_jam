@@ -28,7 +28,7 @@ public class FirstPersonCam : MonoBehaviour
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -80f, 80f);
-        Debug.Log(xRotation);
+        // Debug.Log(xRotation);
 
         transform.rotation  = Quaternion.Euler(xRotation, yRotation, 0);
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);

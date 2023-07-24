@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{4c0e1ed8-2d97-4986-b823-2b071c32578b}">
+		<property name="name">
+			<value>Crossfade</value>
+		</property>
+		<relationship name="folder">
+			<destination>{55a99d2e-ec6c-4faa-856d-869ba2fb7d66}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{0efd44bd-fdbf-48ef-82de-ad0955cacbf1}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{0efd44bd-fdbf-48ef-82de-ad0955cacbf1}">
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.14999999105930328</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+		<relationship name="automators">
+			<destination>{4016bfa6-13b1-46b0-875e-fdf7d48c4e40}</destination>
+		</relationship>
+	</object>
+	<object class="Automator" id="{4016bfa6-13b1-46b0-875e-fdf7d48c4e40}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>cursorPosition</value>
+		</property>
+	</object>
+</objects>

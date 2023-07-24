@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{d1a306b6-890f-423b-99e3-fd2134e9a38c}">
+		<property name="assetPath">
+			<value>Alley_Slums_7.23.23.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>214.73684807256237</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ee351b39-22f9-4405-a339-ee23608ea0e9}</destination>
+		</relationship>
+	</object>
+</objects>
