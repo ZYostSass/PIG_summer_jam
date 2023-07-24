@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/Audio/Narrative Jam FMOD Session/Build/Desktop/SFX.strings.bank
   Name: SFX.strings
   StudioPath: bank:/SFX.strings
-  lastModified: 638258005178512932
+  lastModified: 638258146371839941
   FileSizes:
   - Name: Desktop
     Value: 1000
@@ -90,7 +90,7 @@ MonoBehaviour:
   Path: Assets/Audio/Narrative Jam FMOD Session/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638258005178500385
+  lastModified: 638258146371827592
   FileSizes:
   - Name: Desktop
     Value: 668128
@@ -148,7 +148,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 8178200654489702679}
   - {fileID: -8890195948911104626}
-  cacheTime: 638258005179258912
+  cacheTime: 638258146372623609
   cacheVersion: 131605
 --- !u!114 &178340744714524094
 MonoBehaviour:
@@ -189,7 +189,7 @@ MonoBehaviour:
   Path: Assets/Audio/Narrative Jam FMOD Session/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638258005179234177
+  lastModified: 638258146372607015
   FileSizes:
   - Name: Desktop
     Value: 9297856
@@ -262,7 +262,7 @@ MonoBehaviour:
   Path: Assets/Audio/Narrative Jam FMOD Session/Build/Desktop/Music.strings.bank
   Name: Music.strings
   StudioPath: bank:/Music.strings
-  lastModified: 638258005179258912
+  lastModified: 638258146372623609
   FileSizes:
   - Name: Desktop
     Value: 1000

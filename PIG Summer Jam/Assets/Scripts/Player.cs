@@ -11,8 +11,8 @@ public class Player : MonoBehaviour
     public float groundDrag;
 
     public bool isMoving;
-    public float footstepTimer = 0.0f;
-    private float footstepSpeed = 0.75f;
+    private float footstepTimer = 0.0f;
+    public float footstepSpeed = 0.6f;
 
     [HideInInspector] public float walkSpeed;
 
