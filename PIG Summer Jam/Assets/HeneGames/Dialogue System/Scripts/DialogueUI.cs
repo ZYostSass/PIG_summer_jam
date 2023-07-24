@@ -30,7 +30,7 @@ namespace HeneGames.DialogueSystem
         private DialogueManager currentDialogueManager;
 
         [Header("References")]
-        [SerializeField] private Image portrait;
+        //[SerializeField] private Image portrait;
         [SerializeField] private TextMeshProUGUI nameText;
         [SerializeField] private TextMeshProUGUI messageText;
         [SerializeField] private GameObject dialogueWindow;
@@ -87,7 +87,7 @@ namespace HeneGames.DialogueSystem
 
             dialogueWindow.SetActive(true);
 
-            portrait.sprite = _dialogueCharacter.characterPhoto;
+            //portrait.sprite = _dialogueCharacter.characterPhoto;
             nameText.text = _dialogueCharacter.characterName;
 
             if(animateText)
