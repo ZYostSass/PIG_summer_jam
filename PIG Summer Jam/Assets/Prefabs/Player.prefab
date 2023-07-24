@@ -133,7 +133,7 @@ MonoBehaviour:
   moveSpeed: 5
   groundDrag: 5
   walkSpeed: 0
-  playerHeight: 1.7
+  playerHeight: 2
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
