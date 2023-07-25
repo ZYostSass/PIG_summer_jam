@@ -198,15 +198,15 @@ MonoBehaviour:
     HasValue: 0
   displaySortOrder: 0
   childIdentifiers:
-  - c88d16e5272a4e241b0ef0ac2e53b73d
-  - fd7c55dab0fce234b8c25f6ffca523c1
   - 2c5177b11d81d824dbb064f9ac8527da
-  - e7a046c753c3c3d4aacc91f6597f310d
+  - c88d16e5272a4e241b0ef0ac2e53b73d
+  - 46fbfdf3fc43db0458918377fd40293e
   - 52eb9df5db46521439908db3a29a1bbb
+  - e7a046c753c3c3d4aacc91f6597f310d
+  - 2fea114e74ecf3c4f920e1d5cc1c4c40
+  - fd7c55dab0fce234b8c25f6ffca523c1
   - b7716510a1f36934c87976f3a81dbf3d
   - 0f8eb3f400726694eb47beb1a9f94ce8
-  - 46fbfdf3fc43db0458918377fd40293e
-  - 2fea114e74ecf3c4f920e1d5cc1c4c40
   codecChannels:
     Value: []
     HasValue: 0
@@ -266,17 +266,17 @@ MonoBehaviour:
   HideSetupWizard: 1
   LastEventReferenceScanVersion: 131605
   Platforms:
-  - {fileID: 4455016061762089813}
-  - {fileID: -2228291381269314500}
-  - {fileID: -4850989562885108365}
-  - {fileID: 6726933023448540350}
   - {fileID: -6921152203748027750}
-  - {fileID: 3635280359444379324}
+  - {fileID: -4850989562885108365}
+  - {fileID: -2228291381269314500}
+  - {fileID: 1798661573796454656}
   - {fileID: 2204665605713171543}
+  - {fileID: 3635280359444379324}
+  - {fileID: 4455016061762089813}
+  - {fileID: 5445384451250727731}
+  - {fileID: 6726933023448540350}
   - {fileID: 7535765840137309008}
   - {fileID: 8301895630986597613}
-  - {fileID: 1798661573796454656}
-  - {fileID: 5445384451250727731}
   MigratedPlatforms: 0c000000150000000b0000000a00000009000000120000000800000005000000060000000200000001000000
 --- !u!114 &1798661573796454656
 MonoBehaviour:
@@ -502,7 +502,7 @@ MonoBehaviour:
       Value: 0
       HasValue: 0
     Overlay:
-      Value: 1
+      Value: 0
       HasValue: 1
     Logging:
       Value: 0
